@@ -7,7 +7,7 @@ import Cookie from 'js-cookie';
 
 function AdminScreen(props) {
   const dispatch = useDispatch();
-  const technologies_for_click = ["C", "UNIX", "React", "Redux", "MongoDB", "JS", "HTML", "CSS", "Node", "GTK", "Algorithms", "PHP", "SQL", "Express"];
+  const technologies_for_click = ["C", "UNIX", "React", "Redux", "MongoDB", "JS", "HTML", "CSS", "Node", "GTK", "Algorithms", "PHP", "SQL", "Express", "Python"];
   let techarray = [];
   for (let i = 0; i < technologies_for_click.length; i++)
     techarray.push(false)
@@ -212,7 +212,7 @@ function AdminScreen(props) {
             </div>
         </div>
         {modalVisible === 1 &&
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} autoComplete="off">
         <div className="form_logo">New progect</div>
         {loadingSave && <div className="error">Loading...</div>}
               {errorSave && <div  className="error">{errorSave}</div>}
@@ -237,12 +237,12 @@ function AdminScreen(props) {
 
 
 {modalVisible === 2 && 
-<form onSubmit={chahge_pass}>
+<form onSubmit={chahge_pass}  autoComplete="new-password">
   <div className="form_logo">Change password</div>
     {loadingPass && <div className="error">Loading...</div>}
         {errorPass && <div  className="error">{errorPass}</div>}
-      <input placeholder="New password" value={new_pass} id="new_pass" onChange={(e) => setNew_pass(e.target.value)} type="password"/>
-      <input placeholder="Submit new password" value={c_new_pass} id="c_new_pass" onChange={(e) => setC_new_pass(e.target.value)} type="password"/>
+      <input autoComplete="new-password" placeholder="New password" value={new_pass} id="new_pass" onChange={(e) => setNew_pass(e.target.value)} type="password"/>
+      <input autoComplete="new-password"   placeholder="Submit new password" value={c_new_pass} id="c_new_pass" onChange={(e) => setC_new_pass(e.target.value)} type="password"/>
     <button>Submit</button>
   <button onClick={() => setModalVisible(0)}>Back</button>
 </form>
@@ -250,7 +250,7 @@ function AdminScreen(props) {
 
 
 {modalVisible === 3 && 
-  <form onSubmit={submitHandler}>
+  <form onSubmit={submitHandler}  autoComplete="new-password">
   <div className="form_logo">Edit progect</div>
   {loadingSave && <div className="error">Loading...</div>}
         {errorSave && <div  className="error">{errorSave}</div>}
@@ -441,7 +441,7 @@ function LoginScreen(props) {
 
   }
   return <section className="form_entry">
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} autoComplete="off">
         
     <div>Login to admin panel</div>
     
