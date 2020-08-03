@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080; // Step 1
 const routes = require('./routes/api');
 
 // Step 2
-mongoose.connect(process.env.MONGOLAB_PINK_URI || 'mongodb+srv://mbashenko:Nika26032001@cluster0-el9rx.mongodb.net/portfolio?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://mbashenko:Nika26032001@cluster0-el9rx.mongodb.net/portfolio?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
