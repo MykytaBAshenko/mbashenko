@@ -3,17 +3,18 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const path = require('path');
-
+const projectRoute = require('./routes/projectRoute');
+const userRoute = require('./routes/userRoute');
 const app = express();
 const PORT = process.env.PORT || 8080; // Step 1
 
-const routes = require('./routes/api');
 
 // Step 2
 mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://mbashenko:Nika26032001@cluster0-el9rx.mongodb.net/portfolio?retryWrites=true&w=majority', {
     useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+    useUnifiedTopology: true,
+    useCreateIndex: true
+  }).catch(error => console.log(error.reason));
 
 mongoose.connection.on('connected', () => {
     console.log('Mongoose is connected!!!!');
@@ -32,7 +33,8 @@ if (process.env.NODE_ENV === 'production') {
 
 // HTTP request logger
 app.use(morgan('tiny'));
-app.use('/api', routes);
+app.use("/api/projects", projectRoute);
+app.use("/api/user", userRoute);
 
 
 
