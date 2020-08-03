@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon . --exec babel-node server.js",
-    "install-client": "cd frontend && npm install",
+    "start": "nodemon  babel-node server.js",
+
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "",
