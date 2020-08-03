@@ -12,6 +12,7 @@
     padding: 0;
     margin: 0;
     outline: none;
+    box-sizing: border-box;
 }
 .main_section{
     min-height: 100%;
@@ -23,6 +24,7 @@
 }
 
 body{
+    max-width: 100%;
     min-height: 100vh;
     background: black;
     overflow-x: hidden;
@@ -378,10 +380,12 @@ aside ul li:hover a{
     display: flex;
     padding: 0 5px;
     align-items: center;
+    box-sizing: border-box;
     border-left:1px solid black ;
     border-right:1px solid black ;
 }
 .admin_description input{
+    box-sizing: border-box;
     background: transparent;
     background-color: black;
     border: 1px solid black;
@@ -391,7 +395,8 @@ padding: 4px;
 color: rgb(65, 255, 87);
 }
 .panel_row .word_in_table{
-    padding: 4px 5px;
+    box-sizing: border-box;
+    text-indent: 6px;
     border-left:1px solid black ;
     border-right:1px solid black ;
     overflow-y: auto;
@@ -406,11 +411,12 @@ color: rgb(65, 255, 87);
 
 .panel_row{
     border: 1px solid black;
+    box-sizing: border-box;
     height: 55px;
 }
 
 ::-webkit-scrollbar-thumb {
-background: rgb(0, 255, 30) !important; 
+background: rgb(0, 141, 16) !important; 
 border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -431,10 +437,12 @@ width: 5px;
     align-items: center;
     border-left:1px solid black ;
     border-right:1px solid black ;
+    box-sizing: border-box;
 }
 @media screen and (max-width: 1320px) {
 
     .admin_description-exact{
+        box-sizing: border-box;
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
     border: 1px solid black;
@@ -444,15 +452,15 @@ width: 5px;
 
 .admin_description-exact div {
     min-width: 150px;
-
+    box-sizing: border-box;
     border:1px solid black ;
 }
 .btn_action{
-
+    box-sizing: border-box;
     border:1px solid black ;
 }
 .panel_row .word_in_table{
-    padding: 4px 5px;
+    box-sizing: border-box;
     border:1px solid black ;
 }
     .panel_row{
@@ -468,21 +476,22 @@ display: grid;
 grid-template-columns:1fr 1fr ;
 border: 1px solid black;
 height:200px;
-
+box-sizing: border-box;
 }
 
 .admin_description-exact div {
 min-width: 150px;
-
+box-sizing: border-box;
 border:1px solid black ;
 }
 .btn_action{
-
+    box-sizing: border-box;
 border:1px solid black ;
 }
 .panel_row .word_in_table{
-padding: 4px 5px;
+    text-indent: 6px;
 border:1px solid black ;
+box-sizing: border-box;
 }
 .panel_row{
 height: 200px;
@@ -497,6 +506,7 @@ grid-template-columns:1fr 1fr;
 font-size: 25px;
 padding:2px  8px;
 border: 2px solid black;
+box-sizing: border-box;
 }
 .btn_action button:hover{
     color: rgb(65, 255, 87);
@@ -518,9 +528,11 @@ border: 2px solid black;
 .link_back{
     padding: 30px 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 4fr;
     align-items: center;
 }
+
+
 .link_back a {
     font-size: 30px;
     color: rgb(65, 255, 87);
@@ -533,7 +545,7 @@ border: 2px solid black;
 .btns_header_admin{
     justify-self: end;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap:20px
 }
 .new_project {
@@ -541,6 +553,7 @@ border: 2px solid black;
     padding: 7px  30px;
     font-size: 30px;
     border: 1px solid rgb(65, 255, 87);
+    box-sizing: border-box;
     color: rgb(65, 255, 87);
     background: transparent;
 }
@@ -559,6 +572,28 @@ border: 2px solid black;
     font-size: 40px;
 
 }
+
+@media screen and (max-width:940px) {
+    .link_back{
+        padding: 30px 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    .btns_header_admin{
+        justify-self: center;
+    }
+    .link_back a {
+        text-align: center;
+        margin: 10px 0 30px;
+    }
+}
+
+@media screen and (max-width:740px) {
+    .btns_header_admin{
+        grid-template-columns: 1fr;
+    }
+}
 .admin_section form input{
     font-family: 'Odibee Sans', cursive !important;
 
@@ -566,7 +601,9 @@ border: 2px solid black;
     width: 90%;
     max-width: 700px;
     background: transparent;
+    box-sizing: border-box;
     border: 1px solid rgb(65, 255, 87);
+    box-sizing: border-box;
     color: rgb(65, 255, 87);
     padding: 7px;
 }
@@ -584,6 +621,7 @@ font-family: 'Odibee Sans', cursive !important;
 background: transparent;
 color: rgb(65, 255, 87);
 border: 1px solid rgb(65, 255, 87);
+box-sizing: border-box;
 padding: 7px;
 width: 90%;
 max-width: 450px;
@@ -597,6 +635,7 @@ background: rgb(65, 255, 87);
 .checkbox{
 font-size: 26px;
 border: 1px solid rgb(65, 255, 87);
+box-sizing: border-box;
 padding: 2px 15px;
 cursor: pointer;
 }

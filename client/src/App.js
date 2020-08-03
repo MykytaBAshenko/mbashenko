@@ -2,6 +2,7 @@ import React,{ useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {listProjects, signin, saveProject, send_change_pass, deleteProject} from './actions'
 import {Route, Link} from 'react-router-dom';
+import Cookie from 'js-cookie';
 
 
 function AdminScreen(props) {
@@ -33,6 +34,7 @@ function AdminScreen(props) {
   const redirect = '/logining';
 
   useEffect(() => {
+    console.log(userInfo)
     if (!userInfo) {
       props.history.push(redirect);
     }
@@ -192,6 +194,13 @@ function AdminScreen(props) {
     setC_technologies(arr)
     console.log(c_technologies)
     }
+
+  const exit_from_acc = () => {
+    Cookie.remove('userInfo');
+    const redirect = '/';
+      props.history.push(redirect);
+      dispatch({ type: "USER_EXIT"});
+  } 
   return (
     <section className="admin_section">
       <div className="link_back">
@@ -199,6 +208,7 @@ function AdminScreen(props) {
             <div className="btns_header_admin">
               <button className="new_project" onClick={() => openModal({})}>Create New </button>
               <button className="new_project" onClick={() => set_pass({})}>New Password</button>
+              <button className="new_project" onClick={() => exit_from_acc({})}>Exit</button>
             </div>
         </div>
         {modalVisible === 1 &&
