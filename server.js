@@ -1,40 +1,34 @@
-// Import npm packages
+
 const express = require('express');
-const mongoose = require('mongoose');
-const morgan = require('morgan');
-const path = require('path');
+import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
+import projectRoute from './routes/projectRoute';
+import userRoute from './routes/userRoute';
+require('dotenv').config();
 
-const app = express();
-const PORT = process.env.PORT || 8080; // Step 1
+const mongodbUrl =process.env.MONGODB_URL;
+const PORT = process.env.PORT || 5000;
+console.log(mongodbUrl, PORT);
 
-const routes = require('./routes/api');
-
-// Step 2
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://mbashenko:Nika26032001@cluster0-el9rx.mongodb.net/portfolio?retryWrites=true&w=majority', {
+mongoose.connect(mongodbUrl, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+    useUnifiedTopology: true,
+    useCreateIndex: true
+  }).catch(error => console.log(error.reason));
+  
+  
+  const connection = mongoose.connection;
+  
+  connection.once('open', () => {
+      console.log("conect success");
+  });
+  
+  const app = express();
+  app.use(bodyParser.json());
+  app.use("/api/projects", projectRoute);
+  app.use("/api/user", userRoute);
 
-mongoose.connection.on('connected', () => {
-    console.log('Mongoose is connected!!!!');
-});
-
-// Data parsing
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
-// Step 3
-
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
-}
-
-
-// HTTP request logger
-app.use(morgan('tiny'));
-app.use('/api', routes);
-
-
-
-
-app.listen(PORT, console.log(`Server is starting at ${PORT}`));
+  if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'))
+  }
+app.listen(PORT, () => { console.log("Server started at ",PORT ) });
