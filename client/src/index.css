@@ -13,6 +13,10 @@
     margin: 0;
     outline: none;
 }
+a{
+    z-index: 50;
+}
+
 .main_section{
     min-height: 100%;
     display: grid;
@@ -34,9 +38,10 @@ aside{
     position: fixed;
     list-style-type: none;
     height: 100%;
+    width: 60px;
     display: grid;
     align-items: center;
-    
+    z-index: 0;
 }
 aside ul li{
     width: 65px;
@@ -135,6 +140,7 @@ to { opacity: 1; }
     justify-items: center;
     top:0;
     display: grid;
+    height: 60px;
     align-items: start;
 
 }

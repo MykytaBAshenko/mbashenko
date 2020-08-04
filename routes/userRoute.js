@@ -14,13 +14,19 @@ const User = mongoose.model("User", userSchema);
 const userRoute = express.Router();
 
 userRoute.get("/createadmin", async (req, res) => {
+  const log = "login";
+  const pass = "password";
   try {
     const user = new User({
-      login: 'mbashenko',
-      password: 'Nika26032001'
+      login: log,
+      password: pass
     });
-    const newUser = await user.save();
-    res.send({msg: newUser});
+    const userr = await User.findById({login: log});
+    if(userr && log !== "login" && pass !== "password"){
+      const newUser = await user.save();
+      console.log(newUser)
+    }
+      res.send({msg: "new admin user was created"});
   } catch (error) {
     res.send({ msg: error.message });
   }
