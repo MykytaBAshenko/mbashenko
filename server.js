@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080; // Step 1
 
 
 // Step 2
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://mbashenko:Nika26032001@cluster0-el9rx.mongodb.net/portfolio?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_URI || 'link on your mongodb', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true

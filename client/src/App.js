@@ -228,8 +228,8 @@ function AdminScreen(props) {
               )}
             
             </ul>
-            <input placeholder="Date" value={date|| ''} id="date" onChange={(e) => setDate(e.target.value)}  type="text"/>
-        <input placeholder="Epic lvl 1 - 10" value={Epic_lvl|| ''} id="lvl" onChange={(e) => setEpic_lvl(e.target.value)} type="number"/>
+            <input placeholder="Date (yyyy.mm.dd)" value={date|| ''} id="date" onChange={(e) => setDate(e.target.value)}  type="text"/>
+        <input placeholder="Epic lvl 1 - 9 if lvl 8-9 don`t will shown on mobile" value={Epic_lvl|| ''} id="lvl" onChange={(e) => setEpic_lvl(e.target.value)} type="number"/>
         <button>Submit</button>
         <button onClick={() => setModalVisible(0)}>Back</button>
         </form>
@@ -266,8 +266,8 @@ function AdminScreen(props) {
         )}
       
       </ul>
-      <input placeholder="Date" value={date|| ''} id="date" onChange={(e) => setDate(e.target.value)}  type="text"/>
-  <input placeholder="Epic lvl 1 - 10" value={parseInt(Epic_lvl)|| ''} id="lvl" onChange={(e) => setEpic_lvl(e.target.value)} type="number"/>
+      <input placeholder="Date (yyyy.mm.dd)" value={date|| ''} id="date" onChange={(e) => setDate(e.target.value)}  type="text"/>
+  <input placeholder="Epic lvl 1 - 9 if lvl 8-9 don`t will shown on mobile" value={parseInt(Epic_lvl)|| ''} id="lvl" onChange={(e) => setEpic_lvl(e.target.value)} type="number"/>
   <button>Submit</button>
   <button onClick={() => setModalVisible(0)}>Back</button>
   </form>
