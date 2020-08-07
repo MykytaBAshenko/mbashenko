@@ -37,7 +37,7 @@ const getToken = (user) => {
     _id: user._id,
     login: user.login
   },
-  config.JWT_SECRET,
+  process.env.JWT_SECRET,
   {
     expiresIn: '48h'
   })
