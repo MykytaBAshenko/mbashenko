@@ -375,7 +375,7 @@ function HomeScreen(props) {
         <div>Technologies that I own: Git, UNIX, C, JS, HTML, CSS, SCSS, React, Redux, Node, MongoDB, SQL, PHP, Express, Figma, Photoshop</div>
         <div>I have a telecommunication and radio junior engineering degree from <a target="blank" href="https://en.wikipedia.org/wiki/National_Aviation_University">NAU</a></div>
         <div>I studied programming on the Internet and in a clone of <a target="blank" href="https://uk.wikipedia.org/wiki/UNIT_Factory">school 42</a></div>
-        <div>Link on my CV <a target="blank" href="https://docs.google.com/document/d/1oZx_AhYsWK70bbsW1PzQe4Afc0JNablBch-aknAeA2s/edit?usp=sharing">Mykyta Bashenko</a>
+        <div>Link on my CV <a href="Resume.pdf" download>Mykyta Bashenko</a>
         </div>
     </div>
   <div id="arrow" className={`without_underline link_on_proj`}  onClick={handleClick}><i className="fa fa-arrow-down" aria-hidden="true"></i></div>
