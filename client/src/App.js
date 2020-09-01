@@ -354,7 +354,7 @@ function HomeScreen(props) {
                 <a href="https://github.com/MykytaBAshenko"><i className="fa fa-github"></i></a>
             </li>
             <li>
-                <a href="https://t.me/Nikita_bbbbb"><i className="fa fa-telegram"></i></a>
+                <a href="https://t.me/Nikita_ba"><i className="fa fa-telegram"></i></a>
             </li>
             <li>
                 <a href="https://www.instagram.com/m_bashenko/"><i className="fa fa-instagram"></i></a>
