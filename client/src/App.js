@@ -140,7 +140,12 @@ function AdminScreen(props) {
         _id: id,
         link, name, description, technologies:technologies_for_send, date,
         Epic_lvl
-        }))} 
+        }))
+          let techarray2 = [];
+          for (let i = 0; i < technologies_for_click.length; i++)
+            techarray2.push(false)
+          setC_technologies(techarray2)
+        } 
         else{
           setError_submit("input isn`t from 1 to 9");
         return
