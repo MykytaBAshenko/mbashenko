@@ -379,7 +379,7 @@ function HomeScreen(props) {
         <div>I'm 19 years old, and I live in Kiev</div>
         <div>Technologies that I own: Git, UNIX, C, JS, HTML, CSS, SCSS, React, Redux, Node, MongoDB, SQL, PHP, Express, Figma, Photoshop</div>
         <div>I have a telecommunication and radio junior engineering degree from <a target="blank" href="https://en.wikipedia.org/wiki/National_Aviation_University">NAU</a></div>
-        <div>I studied programming on the Internet and in a clone of <a target="blank" href="https://uk.wikipedia.org/wiki/UNIT_Factory">school 42</a></div>
+        <div>I studied programming in the Internet and in a clone of <a target="blank" href="https://uk.wikipedia.org/wiki/UNIT_Factory">school 42</a></div>
         <div>Link on my CV <a href="Resume.pdf" download>Mykyta Bashenko</a>
         </div>
     </div>
