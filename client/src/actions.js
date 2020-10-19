@@ -18,7 +18,6 @@ const listProjects = () => async (dispatch) => {
 
 
 const signin = (login, password) => async (dispatch) => {
-  console.log(login, password)
   dispatch({ type: USER_SIGNIN_REQUEST, payload: { login, password } });
   try {
     const { data } = await axios.post("/api/user/signin", { login, password });
