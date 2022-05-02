@@ -371,7 +371,7 @@ function HomeScreen(props) {
                 <a href="https://www.youtube.com/channel/UCpO8IWGlnggZ5WoP6Rbn1bQ"><i className="fa fa-youtube-play"></i></a>
             </li> */}
             <li>
-                <a href="www.linkedin.com/in/bashenkomykyta"><i className="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/bashenkomykyta/"><i className="fa fa-linkedin"></i></a>
             </li>
         </ul>
     </aside>
