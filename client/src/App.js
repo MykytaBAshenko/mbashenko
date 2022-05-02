@@ -358,27 +358,27 @@ function HomeScreen(props) {
             <li>
                 <a href="https://github.com/MykytaBAshenko"><i className="fa fa-github"></i></a>
             </li>
-            <li>
+            {/* <li>
                 <a href="https://t.me/Nikita_ba"><i className="fa fa-telegram"></i></a>
-            </li>
+            </li> */}
             <li>
                 <a href="https://www.instagram.com/m_bashenko/"><i className="fa fa-instagram"></i></a>
             </li>
             <li>
                 <a href="mailto:nikita.bashenko2001@gmail.com"><i className="fa fa-envelope"></i></a>
             </li>
-            <li>
+            {/* <li>
                 <a href="https://www.youtube.com/channel/UCpO8IWGlnggZ5WoP6Rbn1bQ"><i className="fa fa-youtube-play"></i></a>
-            </li>
+            </li> */}
             <li>
-                <a href="https://www.linkedin.com/in/mbashenko"><i className="fa fa-linkedin"></i></a>
+                <a href="www.linkedin.com/in/bashenkomykyta"><i className="fa fa-linkedin"></i></a>
             </li>
         </ul>
     </aside>
     <div id="main_block" className="main_block">
         <div>
         <div>Hi, I`m Mykyta Bashenko, I`m kind of a programer</div>
-        <div>I'm 19 years old, and I live in Kiev</div>
+        <div>I'm 21 years old, and I live in Kiev</div>
         <div>Technologies that I own: Git, UNIX, C, JS, HTML, CSS, SCSS, React, Redux, Node, MongoDB, SQL, PHP, Express, Figma, Photoshop</div>
         <div>I have a telecommunication and radio junior engineering degree from <a target="blank" href="https://en.wikipedia.org/wiki/National_Aviation_University">NAU</a></div>
         <div>I studied programming in the Internet and in a clone of <a target="blank" href="https://uk.wikipedia.org/wiki/UNIT_Factory">school 42</a></div>
